@@ -1,0 +1,155 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+*.mo
+*.pot
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# MicroPython
+*.mpy
+.frozen/
+
+# Raspberry Pi Pico
+.picowgo
+.vscode/.ropeproject/
+*.uf2
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+.history/
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Credentials and Secrets
+wifi_config.py
+secrets.py
+config_local.py
+*.env
+.env
+.env.local
+credentials.json
+
+# Logs
+*.log
+logs/
+*.out
+
+# Data and Recordings
+data/
+recordings/
+*.csv
+*.dat
+*.bin
+point_clouds/
+*.ply
+*.pcd
+
+# Compiled Files
+*.o
+*.a
+*.exe
+*.dll
+*.dylib
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+# Build Outputs
+build/
+dist/
+*.hex
+*.elf
+*.map
+
+# Documentation Build
+docs/_build/
+docs/.doctrees/
+site/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# 3D Design Files (Working Files - Keep Final Versions)
+*.stl.1
+*.step~
+*.autosave
+
+# Hardware Testing
+test_output/
+calibration_*.json
+
+# Jetson / CUDA
+*.cu.o
+*.ptx
+
+# Open3D Cache
+.open3d/
