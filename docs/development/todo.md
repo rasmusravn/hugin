@@ -1,22 +1,121 @@
 # Development TODO
-**Authoritative task list - Last updated: 2025-11-03**
+**Authoritative task list - Last updated: 2025-11-04**
 
 > **Note:** This is the single source of truth for project tasks.
 
 ---
 
-## Current Focus: Phase 1 - WiFi Streaming Foundation
+## Current Focus: Phase 0 - Planning & Documentation
+
+### Completed
+- [x] Project concept definition
+- [x] Architecture planning
+- [x] Technical decisions (coordinate systems, units, protocols)
+- [x] Hardware component selection
+- [x] Documentation structure
+- [x] GitHub repository setup
+- [x] License selection (Apache 2.0)
+- [x] README and project overview
 
 ### In Progress
-- [ ]
+- [ ] Review Phase 0 deliverables
+  - [ ] Review all technical decisions for completeness
+  - [ ] Verify documentation accuracy and consistency
+  - [ ] Check for missing specifications
+  - [ ] Validate hardware component choices
+  - [ ] Ensure all Phase 0 success criteria are met
 
 ### Up Next
-- [ ] Set up Pico W development environment
-- [ ] Flash MicroPython to Pico W
-- [ ] Test basic WiFi connection
-- [ ] Create UDP sender on Pico W (dummy data)
-- [ ] Create UDP receiver on Jetson
-- [ ] Verify live data streaming works
+- [ ] Complete Phase 0 review and close phase
+- [ ] Order hardware components (MPU6050, VL53L1X, battery)
+- [ ] Begin Phase 1: WiFi Streaming Foundation
+
+---
+
+## Phase 0: Planning & Documentation
+**Goal:** Define project scope, architecture, and technical specifications
+**Success Criteria:** Complete documentation and technical decisions finalized
+
+- [x] Define project concept and goals
+  - [x] Define primary use cases (spatial documentation, home construction, interior design)
+  - [x] Establish key innovation (throwable sensor ball with live streaming)
+  - [x] Set version 1 scope (indoor focus, DIY kit, $50-150 price target)
+  - [x] Define design principles (cheap, open, educational, iterative)
+  - [x] Identify "Proof of Life" milestone
+- [x] Research and select hardware components
+  - [x] Select MCU: Raspberry Pi Pico W (WiFi, lightweight, cheap)
+  - [x] Select IMU: MPU6050 (accelerometer + gyroscope)
+  - [x] Select distance sensor: VL53L1X ToF (~4m range)
+  - [x] Select base station: Jetson Orin Nano (powerful for future SLAM/ML)
+  - [x] Plan battery: LiPo with 30-minute runtime target
+  - [x] Document component rationale and alternatives
+  - [x] Calculate power budget (~175mA total)
+- [x] Plan system architecture (Pico W + Jetson)
+  - [x] Design two-component system (ball + base station)
+  - [x] Define data flow (sensors → Pico W → WiFi → Jetson → visualization)
+  - [x] Plan software components (MicroPython firmware, Python receiver)
+  - [x] Document hardware I2C wiring (I2C0: MPU6050, I2C1: VL53L1X)
+  - [x] Design for optional sensor expansion (vacant mounts)
+- [x] Decide on communication protocol (UDP/WiFi)
+  - [x] Choose UDP over TCP (lower latency, acceptable packet loss)
+  - [x] Define port: 5000 (configurable)
+  - [x] Select data format: JSON (binary deferred to Phase 4)
+  - [x] Set sample rate: 50 Hz fixed
+  - [x] Document packet structure with field descriptions
+- [x] Define coordinate system and sensor units
+  - [x] Choose right-handed coordinate system (+X forward, +Y left, +Z up)
+  - [x] Set accelerometer units: m/s² (SI standard)
+  - [x] Set gyroscope units: rad/s (radians per second)
+  - [x] Set distance units: centimeters (practical precision)
+  - [x] Choose quaternions for rotation representation (avoid gimbal lock)
+  - [x] Document IMU mounting orientation
+- [x] Document all technical decisions with rationale
+  - [x] Create decisions.md with all architectural choices
+  - [x] Document alternatives considered for each decision
+  - [x] Explain rationale for hardware selections
+  - [x] Record decisions on protocols, units, and algorithms
+  - [x] Mark future decisions to be deferred
+- [x] Create comprehensive project documentation
+  - [x] Write project_overview.md (concept, architecture, milestones, philosophy)
+  - [x] Create technical documentation (architecture, hardware specs, protocols, coordinate systems)
+  - [x] Write development documentation (setup guide, todo list, testing notes)
+  - [x] Document progress (decisions, session notes, issues)
+  - [x] Create documentation navigation structure
+- [x] Set up GitHub repository
+  - [x] Initialize git repository
+  - [x] Create .gitignore for Python, MicroPython, embedded systems
+  - [x] Create private GitHub repository
+  - [x] Set up remote and push initial commit
+  - [x] Add future ideas (edge AI/ML, standalone mode)
+- [x] Choose open source license
+  - [x] Decide on Apache 2.0 license
+  - [x] Create LICENSE file with copyright
+  - [x] Update all documentation with license choice
+- [x] Write README for future makers
+  - [x] Write welcoming introduction with project concept
+  - [x] Explain "Use what you have" philosophy
+  - [x] Add getting started instructions (for future Phase 5)
+  - [x] Include git clone URL
+  - [x] Style with markdown formatting and emojis
+- [x] Set up GitHub Pages for documentation
+  - [x] Create docs/index.md navigation hub
+  - [x] Configure Jekyll with Cayman theme
+  - [x] Set up _config.yml for GitHub Pages
+  - [x] Create docs/README.md as alternative entry point
+  - [x] Focus Pages on development documentation only
+- [x] Create CLAUDE.md for future AI instances
+  - [x] Document project overview and current phase
+  - [x] Explain documentation structure
+  - [x] Define critical technical decisions
+  - [x] Document planned architecture
+  - [x] Explain project philosophy and audience split
+- [ ] Review Phase 0 deliverables
+  - [ ] Review all technical decisions for completeness
+  - [ ] Verify documentation accuracy and consistency
+  - [ ] Check for missing specifications or undocumented choices
+  - [ ] Validate hardware component selections against requirements
+  - [ ] Ensure all Phase 0 success criteria are met
+  - [ ] Identify any gaps before moving to Phase 1
 
 ---
 
