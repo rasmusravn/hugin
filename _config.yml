@@ -6,13 +6,6 @@ show_downloads: false
 # GitHub metadata
 repository: rasmusravn/hugin
 
-# Navigation
-navigation:
-  - title: Home
-    url: /
-  - title: Documentation
-    url: /docs/
-
 # Enable relative links for GitHub Pages
 relative_links:
   enabled: true
@@ -27,10 +20,9 @@ kramdown:
 # Include/exclude files
 include:
   - docs
-  - README.md
-  - LICENSE
 
 exclude:
   - .git
   - .gitignore
   - .claude
+  - CLAUDE.md
