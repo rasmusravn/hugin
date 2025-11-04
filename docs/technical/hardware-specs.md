@@ -90,11 +90,9 @@ GND          -> GND  (Pin 38)
 | VL53L1X      | 3.3V    | ~20mA    | Active ranging     |
 | **Total**    |         | **~175mA** |                  |
 
-**Battery options:**
-- 500mAh: ~2.8 hours runtime
-- 1000mAh: ~5.7 hours runtime
+**Battery life target:** 30 minutes continuous operation
 
-**Target battery:** 1000mAh LiPo for good balance of size/runtime
+**Battery sizing:** At ~175mA continuous draw, a 100mAh battery would provide ~30 minutes runtime. Larger batteries provide longer runtime but add weight and size.
 
 ---
 
@@ -104,15 +102,49 @@ GND          -> GND  (Pin 38)
 
 ---
 
+## Optional Sensor Mounting
+
+**Vacant Mounts for Expansion**
+
+The Hugin ball design includes vacant mounting points for optional sensors, enabling customization and experimentation.
+
+**Mounting Requirements:**
+- Standardized mounting holes for common sensor breakout boards
+- I2C bus access (shared with existing sensors)
+- Clear line-of-sight for optical sensors
+- Secure mounting to withstand impacts during flight
+- Easy removal and replacement for different sensors
+
+**Potential Optional Sensors:**
+- Additional ToF sensors (VL53L1X) for multi-directional ranging
+- Color sensors for texture/material detection
+- Light sensors for brightness mapping
+- Temperature/humidity sensors for environmental data
+- Magnetometer for compass heading
+- Barometric pressure sensor for altitude
+- Camera modules (future - requires different MCU)
+
+**Design Philosophy:**
+The vacant mounts support the "Use what you have" philosophy - builders can experiment with sensors they already own or add capabilities specific to their use case.
+
+**Integration Notes:**
+- Software must be modified to read additional sensors
+- Power budget must be recalculated with additional sensors
+- I2C address conflicts must be avoided (check sensor datasheets)
+- Data streaming format may need extension for new sensor types
+
+---
+
 ## Enclosure Design (Future)
 
 **Requirements:**
 - Spherical or near-spherical shape
-- Clear window for ToF sensor
+- Clear window for ToF sensor(s)
 - IMU mounted near center of mass
 - Impact protection (foam padding)
 - Easy access for charging/programming
 - Balanced weight distribution
+- Accessible mounting points for optional sensors
 
 **Material options:**
 - PLA: Easy to print, rigid

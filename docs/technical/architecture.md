@@ -61,7 +61,7 @@
 - **Sensor sample rate:** 50 Hz (fixed)
 - **Packet rate:** 50 packets/second
 - **Expected latency:** <100ms end-to-end
-- **Battery life:** 30+ minutes continuous operation (target), 2-5 hours possible with 1000mAh battery
+- **Battery life target:** 30 minutes continuous operation
 
 ## Future Enhancements
 

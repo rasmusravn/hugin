@@ -204,6 +204,14 @@ This is the key achievement that validates the concept. Everything else is refin
 - Battery positioned for balance
 - Impact absorption (foam, rubber bumpers)
 - Easy access for charging/programming
+- **Vacant mounts for optional sensors** (standardized mounting points for expansion)
+
+### Optional Sensor Support
+The ball design includes mounting points for optional sensors, enabling customization:
+- Additional ToF sensors for multi-directional ranging
+- Environmental sensors (temperature, humidity, light)
+- Magnetometer, barometer, or other I2C sensors
+- Supports "Use what you have" philosophy - experiment with available sensors
 
 ---
 
@@ -404,7 +412,7 @@ See `docs/progress/decisions.md` for full rationale:
 
 ### Project Management (Deferred to Phase 5)
 - [ ] GitHub repo structure
-- [ ] License choice (likely MIT or Apache 2.0)
+- [x] License choice: Apache 2.0
 - [ ] Community contribution guidelines
 
 ---
@@ -456,9 +464,9 @@ See `docs/progress/decisions.md` for full rationale:
 
 ## Contact & Collaboration
 
-**GitHub:** (To be created)  
-**License:** (To be decided - likely MIT or Apache 2.0)  
-**Status:** Planning phase - contributors welcome once Phase 1 complete
+**GitHub:** https://github.com/rasmusravn/hugin (currently private)
+**License:** Apache 2.0
+**Status:** Phase 1 - Foundation (WiFi Streaming) - contributors welcome once Phase 1 complete
 
 ---
 
