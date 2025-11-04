@@ -36,6 +36,8 @@ A ball you throw around a room that contains sensors, capturing 3D spatial data 
 - Long-distance throws with assisted launch
 - Professional-grade accuracy
 - Pre-assembled commercial product
+- **Edge AI/ML Enhancement:** Use edge TPUs (Coral, etc.) for AI-powered point cloud reconstruction - fill gaps between sparse measurements, denoise data, and generate complete 3D models/images from partial scans
+- **Standalone Mode:** Self-contained ball with onboard compute (no base station required) - process and store mapping data internally, download results via USB/WiFi after throws
 
 ### Design Principles
 1. **Cheap:** Affordable components, expendable if broken

@@ -109,6 +109,19 @@
 - Outdoor scanning support (future version)
 - GPS integration for outdoor use
 
+### Advanced Future Concepts
+- **Edge AI/ML Point Cloud Reconstruction:** Integrate edge TPU (Google Coral, etc.) for AI-powered gap filling and denoising
+  - Use ML models to interpolate between sparse measurements
+  - Generate complete 3D models/images from partial scans
+  - Real-time or post-processing enhancement of point clouds
+  - Trained models for indoor geometry reconstruction
+- **Standalone Ball Mode:** Self-contained operation without base station
+  - Add more powerful compute module to ball (Raspberry Pi Zero 2 W, Jetson Nano module, etc.)
+  - Onboard data processing and storage
+  - Download mapping results after throws via USB or WiFi
+  - Battery-powered visualization on small OLED display
+  - Reduces setup complexity - just throw and retrieve
+
 ---
 
 ## Blocked / Waiting
