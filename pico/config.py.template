@@ -1,0 +1,25 @@
+# config.py.template
+# WiFi and Network Configuration for Hugin Pico W
+#
+# SECURITY NOTE: Copy this file to config.py and fill in your actual values.
+# config.py is in .gitignore and will NOT be committed to git.
+#
+# Usage:
+#   cp config.py.template config.py
+#   # Edit config.py with your network details
+#   # Never commit config.py to version control
+
+# WiFi Network Settings
+WIFI_SSID = "your_network_name"
+WIFI_PASSWORD = "your_password"
+
+# Jetson Base Station Settings
+JETSON_IP = "192.168.1.xxx"  # Find with: hostname -I on Jetson
+JETSON_PORT = 5000
+
+# Sensor Configuration
+SAMPLE_RATE_HZ = 50  # Fixed sample rate (20ms between packets)
+
+# Optional: Timeout and retry settings
+WIFI_TIMEOUT_SECONDS = 10
+WIFI_RETRY_ATTEMPTS = 3

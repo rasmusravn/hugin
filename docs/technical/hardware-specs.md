@@ -10,8 +10,9 @@
 ### To Purchase (Phase 1)
 - ☐ MPU6050 IMU (~$2)
 - ☐ VL53L1X ToF Distance Sensor (~$15)
-- ☐ LiPo battery + charging circuit (~$10-20)
+- ☐ LiPo battery 150-200mAh + charging circuit (~$10-20)
 - ☐ Breadboard/jumper wires
+- ☐ (Optional) I2C pull-up resistors 4.7kΩ if not included on breakout boards
 
 ### Future Additions
 - Multiple ToF sensors (4-6 units)
@@ -79,6 +80,29 @@ LiPo Battery -> VSYS (Pin 39)
 GND          -> GND  (Pin 38)
 ```
 
+### I2C Pull-Up Resistors
+
+**Note:** Most I2C sensor breakout boards include built-in pull-up resistors. However, if you experience communication issues, you may need to add external pull-ups.
+
+**Why Pull-Ups Are Needed:**
+I2C uses an open-drain bus architecture where devices can only pull the signal lines (SDA/SCL) low, never high. Pull-up resistors are required to pull the lines back to high voltage (3.3V) when no device is actively pulling low. Without pull-ups, the bus lines would float at an undefined voltage, causing unreliable communication.
+
+**Technical Details:**
+- **Typical value:** 4.7kΩ (range: 2.2kΩ - 10kΩ)
+- **Connection:** One resistor from SDA to 3.3V, one from SCL to 3.3V
+- **Multiple devices:** All devices share the same pull-up resistors (I2C is a bus)
+- **Too many pull-ups:** Multiple breakout boards with built-in resistors in parallel can create too-strong pull-ups (effective resistance too low), potentially causing signal issues
+
+**When to add external pull-ups:**
+- Using bare sensor chips without breakout boards
+- Very long I2C wires (>30cm)
+- Multiple devices causing bus capacitance issues
+- Communication errors or unreliable readings
+
+**When NOT needed:**
+- Using commercial breakout boards (GY-521 for MPU6050, Adafruit/SparkFun modules) - they include pull-ups
+- Standard breadboard prototyping with short wires
+
 ---
 
 ## Power Budget
@@ -92,7 +116,14 @@ GND          -> GND  (Pin 38)
 
 **Battery life target:** 30 minutes continuous operation
 
-**Battery sizing:** At ~175mA continuous draw, a 100mAh battery would provide ~30 minutes runtime. Larger batteries provide longer runtime but add weight and size.
+**Battery sizing:**
+- Continuous draw: ~175mA average
+- Theoretical 30min runtime: 87.5mAh minimum
+- **Recommended capacity: 150-200mAh**
+  - Provides safety margin for WiFi transmission spikes
+  - Accounts for safe LiPo discharge limit (80% DoD)
+  - Ensures reliable 30+ minute operation
+- Larger batteries provide longer runtime but add weight and size
 
 ---
 

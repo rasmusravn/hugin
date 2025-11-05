@@ -79,11 +79,9 @@ Thumbs.db
 desktop.ini
 
 # Credentials and Secrets
-wifi_config.py
-secrets.py
-config_local.py
+# Copy config.py.template to config.py and fill in your values
+config.py
 *.env
-.env
 .env.local
 credentials.json
 

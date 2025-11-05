@@ -6,14 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Hugin is an open hardware throwable sensor ball for indoor spatial mapping. The ball contains a Raspberry Pi Pico W with IMU (MPU6050) and ToF distance sensor (VL53L1X) that streams data via WiFi to a Jetson Orin Nano base station for real-time 3D visualization and point cloud generation.
 
-**Current Phase:** Phase 0 - Planning & Documentation (Completed)
-**Next Phase:** Phase 1 - WiFi Streaming Foundation
+**Current Phase:** Phase 1 - WiFi Streaming Foundation
+**Previous Phase:** Phase 0 - Planning & Documentation (Completed 2025-11-05)
 **License:** Apache 2.0
 **Repository:** https://github.com/rasmusravn/hugin (private)
 
 ## Documentation Structure
 
-Phase 0 (Planning & Documentation) is complete. No code implementation exists yet. All project information lives in `/docs/`:
+Phase 0 (Planning & Documentation) is complete as of 2025-11-05. No code implementation exists yet - starting Phase 1. All project information lives in `/docs/`:
 
 - **`docs/project_overview.md`** - Comprehensive project definition, architecture, milestones, and philosophy
 - **`docs/development/todo.md`** - **Single source of truth** for all tasks and project phases

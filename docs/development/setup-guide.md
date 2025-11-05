@@ -31,7 +31,19 @@ sudo apt install thonny
 4. Drag and drop `.uf2` file to the drive
 5. Pico W automatically reboots with MicroPython installed
 
-### 5. Test Connection
+### 5. Configure WiFi Credentials
+
+**IMPORTANT:** Never commit WiFi passwords to git!
+
+```bash
+cd pico/
+cp config.py.template config.py
+# Edit config.py with your actual WiFi credentials and Jetson IP
+```
+
+The `config.py` file is in `.gitignore` and will not be committed to version control.
+
+### 6. Test Connection
 
 Open Thonny:
 1. Select "MicroPython (Raspberry Pi Pico)" from interpreter dropdown
