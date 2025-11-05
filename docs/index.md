@@ -31,14 +31,4 @@ This is the technical development documentation for the Hugin project.
 
 ---
 
-## Current Status
-
-**Phase:** Phase 0 - Planning & Documentation (Completed)
-
-**Next:** Phase 1 - WiFi Streaming Foundation
-
-See [Development TODO](development/todo.md) for detailed task breakdown and next steps.
-
----
-
 *This documentation is for developers working on the Hugin project. For general project information, see the [main README](https://github.com/rasmusravn/hugin#readme).*
