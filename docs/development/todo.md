@@ -8,6 +8,7 @@
 ## Current Focus: Phase 1 - WiFi Streaming Foundation
 
 ### Up Next
+- [ ] Create conceptual drawing of the ball (components, layout, sensors)
 - [ ] Set up Pico W development environment (see `setup-guide.md`)
 - [ ] Flash MicroPython to Pico W
 - [ ] Configure WiFi credentials (copy config.py.template to config.py)

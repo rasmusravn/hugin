@@ -122,6 +122,15 @@ The ball design includes vacant mounting points for expansion sensors. When addi
 - Extend data streaming format if needed
 - Update software to read new sensor types
 
+## Work in sessions. 
+
+- Whenever i start a session, create a section in the file
+"./docs/progress/session-notes.md". 
+- Update the session note with whenever relevant, so that work is always
+documented.
+- When ending a session review the session note.
+- Commit session and dont include claude-code in the commit message.
+
 ## Important Notes
 
 - **No code exists yet** - project is in planning/documentation phase
