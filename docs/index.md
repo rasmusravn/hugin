@@ -22,7 +22,3 @@ This is the technical development documentation for the Hugin project.
 - [**Technical Decisions**](progress/decisions.md) - Architectural decisions and rationale
 - [**Session Notes**](progress/session-notes.md) - Development session logs
 - [**Issues**](progress/issues.md) - Known problems and blockers
-
----
-
-*This documentation is for developers working on the Hugin project. For general project information, see the [main README](https://github.com/rasmusravn/hugin#readme).*
