@@ -3,29 +3,6 @@
 
 > **Note:** This is the single source of truth for project tasks.
 
----
-
-## Current Focus: Phase 1 - WiFi Streaming Foundation
-
-### Up Next
-- [ ] Create conceptual drawing of the ball (components, layout, sensors)
-- [ ] Set up Pico W development environment (see `setup-guide.md`)
-- [ ] Flash MicroPython to Pico W
-- [ ] Configure WiFi credentials (copy config.py.template to config.py)
-- [ ] Test basic WiFi connection
-- [ ] Create UDP sender on Pico W (dummy sensor data)
-- [ ] Create UDP receiver on Jetson
-- [ ] Test data streaming with dummy values
-- [ ] Verify live updates work on screen
-
-### Hardware Shopping List
-- [ ] Order MPU6050 IMU (~$2)
-- [ ] Order VL53L1X ToF sensor (~$15)
-- [ ] Order LiPo battery 150-200mAh + charging circuit (~$10-20)
-- [ ] (Optional) I2C pull-up resistors 4.7kΩ if breakout boards don't include them
-
----
-
 ## Phase 0: Planning & Documentation ✅ COMPLETE
 **Goal:** Define project scope, architecture, and technical specifications
 **Success Criteria:** Complete documentation and technical decisions finalized
@@ -57,10 +34,18 @@
 
 ---
 
-## Phase 1: Foundation - WiFi Streaming
+## Phase 1: Foundation - WiFi Streaming - CURRENT FOCUS
 **Goal:** Get Pico W streaming dummy data to Jetson over WiFi
 **Success Criteria:** See dummy sensor data streaming live on Jetson screen (no throwing needed yet)
 
+### Hardware Acquisition
+This section is moved since the model of RP Pico I had was without wifi.
+- [ ] Order Raspberry Pi Pico 2 W
+- [ ] Order MPU6050 IMU (~$2)
+- [ ] Order VL53L1X ToF sensor (~$15)
+- [ ] Order LiPo battery + charging circuit (~$10-20)
+
+### "Hul igennem"-test
 - [ ] Set up Pico W development environment (see `setup-guide.md`)
 - [ ] Flash MicroPython to Pico W
 - [ ] Test basic WiFi connection
@@ -74,11 +59,6 @@
 ## Phase 2: Real Sensors
 **Goal:** Read actual IMU and ToF data
 **Success Criteria:** Can throw Pico W and see real orientation and distance values updating live during flight
-
-### Hardware Acquisition
-- [ ] Order MPU6050 IMU (~$2)
-- [ ] Order VL53L1X ToF sensor (~$15)
-- [ ] Order LiPo battery + charging circuit (~$10-20)
 
 ### Integration
 - [ ] Wire MPU6050 to Pico W (I2C0: GP4/GP5 - see `../technical/hardware-specs.md`)

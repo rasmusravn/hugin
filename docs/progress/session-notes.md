@@ -1,5 +1,36 @@
 # Session Notes
 
+---
+
+## 2025-11-05 - Ordering parts
+
+### What I Did
+- Ordered Raspberry Pi Pico 2 W
+-
+-
+
+### Technical Details
+#### Subsystem/Feature Name (if applicable)
+- Hugin ball
+-
+
+### What Worked
+-
+-
+
+### Issues Encountered
+-
+-
+
+### Decisions Made
+-
+-
+
+### Next Steps
+-
+-
+
+---
 ## 2025-11-05 - Phase 0 Review and Completion
 
 ### What I Did
@@ -75,4 +106,42 @@ Added technical documentation explaining:
 - Set up Pico W development environment
 
 ---
+
+## Session Note Template
+
+Copy this template to start a new session:
+
+```markdown
+---
+
+## YYYY-MM-DD - Brief Session Title
+
+### What I Did
+-
+-
+-
+
+### Technical Details
+#### Subsystem/Feature Name (if applicable)
+-
+-
+
+### What Worked
+-
+-
+
+### Issues Encountered
+-
+-
+
+### Decisions Made
+-
+-
+
+### Next Steps
+-
+-
+
+---
+```
 
