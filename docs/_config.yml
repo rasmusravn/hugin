@@ -1,6 +1,6 @@
 title: Hugin Documentation
 description: Technical documentation for the Hugin spatial mapping ball project
-theme: jekyll-theme-cayman
+theme: jekyll-theme-midnight
 
 # Markdown settings
 markdown: kramdown
