@@ -38,12 +38,14 @@
 **Goal:** Get Pico W streaming dummy data to Jetson over WiFi
 **Success Criteria:** See dummy sensor data streaming live on Jetson screen (no throwing needed yet)
 
-### Hardware Acquisition
+### Hardware Acquisition - IN PROGRESS
 This section is moved since the model of RP Pico I had was without wifi.
-- [ ] Order Raspberry Pi Pico 2 W
-- [ ] Order MPU6050 IMU (~$2)
-- [ ] Order VL53L1X ToF sensor (~$15)
-- [ ] Order LiPo battery + charging circuit (~$10-20)
+- [x] Order Raspberry Pi Pico W (Pico 2 W not available - using original Pico W)
+- [x] Order MPU6050 IMU development board (~$2-5)
+- [x] Order VL53L1X ToF sensor development board (~$15-20)
+- [x] Order LiPo battery + charging circuit (~$10-20)
+- [ ] Receive component delivery from ardustore.dk
+- **Note:** Using development boards for prototyping; cost optimization deferred to future phase
 
 ### "Hul igennem"-test
 - [ ] Set up Pico W development environment (see `setup-guide.md`)
@@ -126,6 +128,15 @@ This section is moved since the model of RP Pico I had was without wifi.
 - Outdoor scanning support (future version)
 - GPS integration for outdoor use
 
+### Cost Optimization Phase
+- **Replace development boards with bare sensors:** Current prototype uses breakout boards (convenient but expensive)
+  - MPU6050: Bare chip ~$0.50 vs breakout board ~$2-5
+  - VL53L1X: Bare chip ~$5-8 vs breakout board ~$15-20
+  - Requires: Custom PCB design, SMD soldering, external pull-up resistors, voltage regulators
+  - Target: Reduce per-ball sensor cost by 50-70%
+  - Complexity tradeoff: Lower cost but harder to assemble for DIY makers
+  - Consider: Offer both "easy build" (breakout boards) and "budget build" (bare chips) options in documentation
+
 ### Advanced Future Concepts
 - **Edge AI/ML Point Cloud Reconstruction:** Integrate edge TPU (Google Coral, etc.) for AI-powered gap filling and denoising
   - Use ML models to interpolate between sparse measurements
@@ -142,7 +153,7 @@ This section is moved since the model of RP Pico I had was without wifi.
 ---
 
 ## Blocked / Waiting
-- **Phase 2 start:** Waiting for component delivery (not yet ordered)
+- **Phase 1 "Hul igennem"-test:** Waiting for component delivery from ardustore.dk (ordered 2025-11-05)
 
 ---
 

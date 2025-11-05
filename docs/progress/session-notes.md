@@ -2,33 +2,43 @@
 
 ---
 
-## 2025-11-05 - Ordering parts
+## 2025-11-05 - Hardware Ordering
 
 ### What I Did
-- Ordered Raspberry Pi Pico 2 W
--
--
+- Ordered all Phase 1 hardware components from ardustore.dk:
+  - Raspberry Pi Pico W (Pico 2 W not available)
+  - MPU6050 IMU development board
+  - VL53L1X ToF sensor development board
+  - LiPo battery (150-200mAh range) + charging circuit
 
 ### Technical Details
-#### Subsystem/Feature Name (if applicable)
-- Hugin ball
--
+#### Hardware Components
+- All components ordered from ardustore.dk (Danish electronics webshop)
+- Chose Pico W instead of Pico 2 W (availability constraint)
+- Chose development boards (breakout boards) for initial prototype
+- Development boards include I2C pull-up resistors and voltage regulators (easier to wire)
 
 ### What Worked
--
--
+- Successfully found all required Phase 1 components at single webshop
+- Pico W is sufficient for Phase 1 WiFi streaming proof of concept
 
 ### Issues Encountered
--
--
+- Pico 2 W not available at ardustore.dk
+- Solution: Ordered Pico W instead (original Pico W is fine for this project)
 
 ### Decisions Made
--
--
+- **Using Pico W instead of Pico 2 W:** Availability constraint, but functionally equivalent for this project
+- **Cost optimization deferred to future phase:** Development boards are more expensive than bare sensor chips but much easier to prototype with
+- Documented future cost optimization opportunity in backlog
+  - Current: Development boards (~$2-20 per sensor)
+  - Future option: Bare chips with custom PCB (50-70% cost reduction)
+  - Will offer both "Easy Build" and "Budget Build" options in final documentation
 
 ### Next Steps
--
--
+- Wait for component delivery
+- Once received: Set up Pico W development environment (Thonny or VS Code)
+- Flash MicroPython firmware to Pico W
+- Begin "Hul igennem"-test (proof of concept WiFi streaming)
 
 ---
 ## 2025-11-05 - Phase 0 Review and Completion
