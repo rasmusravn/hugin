@@ -1,6 +1,7 @@
 # 🐦‍⬛ Hugin 🏀
 ### *A useful toy for mapping your living room*
 
+![A conceptual AI slop drawing](./docs/images/concept_image.png)
 ---
 
 This is an **OpenHardware project** for makers or makers to be. Hopefully you will look through
@@ -25,7 +26,6 @@ sensors and a battery. For the base station we will use a **Jetson Orin Nano Sup
 
 Please contribute with your own configuration, if you get another combination of parts to work. 🤝
 
-![A conceptual AI slop drawing](./docs/images/concept_image.png)
 
 ---
 
