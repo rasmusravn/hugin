@@ -2,6 +2,91 @@
 
 ---
 
+## 2025-11-08 - Compliant Mechanism Research
+
+### What I Did
+- Researched compliant mechanisms for impact protection of electronics in throwable applications
+- Created comprehensive technical documentation: `docs/technical/compliant-mechanisms.md`
+- Analyzed 5 main suspension concepts: TPU lattice, silicone pads, flexure beams, nested spherical shells, memory foam
+- Documented hybrid approaches combining multiple concepts
+- Updated hardware specs to reference compliant mechanism documentation
+
+### Technical Details
+
+#### Research Findings
+**Academic Sources:**
+- **MEMS shock protection:** Self-adaptive nonlinear stops reduced impact force by 89.4% and dissipated 22.7% of mechanical energy
+- **TPU lattice optimization:** Optimized structures enhanced energy absorption by up to 20%
+- **PCB vibration damping:** Extension housing with damping materials achieved 60% vibration reduction
+- **Luxury watch anti-shock systems:** Incabloc/Kif mechanisms use compliant spring-loaded jewels (100+ years of refinement)
+
+**Material Properties:**
+- TPU (thermoplastic polyurethane): Shore hardness 85A-98A, density ~1.2 g/cm³, excellent shock absorption
+- Silicone: Shore 30A-60A, wide frequency damping, readily available
+- Memory foam: Slow recovery (reduces rebound), very cheap, good multi-axis protection
+
+#### Five Main Concepts Evaluated
+
+1. **TPU Lattice Suspension**
+   - 3D-printed flexible cage with tunable lattice geometry (honeycomb, gyroid, spring struts)
+   - Advantages: Single-print assembly, customizable stiffness, lightweight, rapid iteration
+   - Challenges: TPU printing difficulty, stiffness prediction requires testing
+
+2. **Silicone Pad Stack**
+   - Electronics sandwiched between silicone layers with compression preload
+   - Advantages: Simple assembly, excellent vibration damping, predictable behavior, readily available
+   - Challenges: Cutting/sizing sheets, potential shifting, heavier than TPU
+
+3. **Flexure Beam Suspension**
+   - Cantilever beams connect electronics platform to shell, FEA-calculable stiffness
+   - Advantages: Precise control, low part count, predictable deflection paths
+   - Challenges: Fatigue risk at beam roots, difficult to achieve isotropic stiffness
+
+4. **Nested Spherical Shells**
+   - Inner sphere suspended inside outer sphere by flexible ligaments
+   - Advantages: Isotropic protection, large energy absorption, self-centering, elegant
+   - Challenges: Complex printing, difficult post-assembly access, higher part count
+
+5. **Memory Foam Core**
+   - Electronics embedded in memory foam block inside rigid shell
+   - Advantages: Excellent shock absorption, extremely simple, cheap, multi-directional
+   - Challenges: Difficult precise positioning, foam degradation, heat retention
+
+#### Recommended Hybrid Approach
+**TPU Lattice + Silicone Pads** (two-stage compliance):
+- Primary: TPU lattice cage for structural support and large deflections
+- Secondary: Thin silicone pads (2-3 mm) for high-frequency damping and rebound reduction
+- Benefits: Lattice prevents bottoming out, silicone damps vibrations, easy tuning without reprinting
+
+### Design Requirements Established
+- **Target peak acceleration:** <20 G at PCB (protects solder joints and battery)
+- **Component damage thresholds:** PCB 50-100 G, LiPo 40 G, MEMS 10,000 G, connectors 20-30 G
+- **Measurement metrics:** Peak G reduction (>50% target), displacement travel (5-10 mm), rebound behavior (<3 bounces), resonant frequency (10-30 Hz)
+
+### Test Methodology Defined
+- Drop test rig with electromagnet release from 0.5 m, 1.0 m, 1.5 m heights
+- IMU data logging at maximum sample rate during impact
+- High-speed video (smartphone 240 fps) for deflection observation
+- Python analysis script for peak G-force and FFT frequency content
+
+### What Worked
+- Web search yielded excellent academic and practical sources
+- Found clear parallels between watch shock protection and Hugin requirements
+- Identified actionable design parameters for Phase 4 implementation
+
+### Decisions Made
+- **Recommended primary concept:** TPU lattice + silicone pad hybrid
+- **Design target:** <20 G peak acceleration at PCB
+- **Testing approach:** Drop tests with IMU data analysis and high-speed video
+- **Deferred to Phase 4:** Actual CAD design, prototyping, and testing
+
+### Next Steps
+- Document compliant mechanism research in Phase 4 task list
+- When Phase 4 begins: CAD basic lattice structure, 3D print test samples, conduct drop tests
+- Consider documenting alternative build options (simple vs. optimized suspension) for community
+
+---
+
 ## 2025-11-05 - Hardware Ordering
 
 ### What I Did

@@ -14,10 +14,11 @@
 - ☐ Breadboard/jumper wires
 - ☐ (Optional) I2C pull-up resistors 4.7kΩ if not included on breakout boards
 
-### Future Additions
+### Future Additions (Phase 4+)
 - Multiple ToF sensors (4-6 units)
-- 3D printed enclosure
-- Impact protection/padding
+- 3D printed enclosure with compliant suspension (see `docs/technical/compliant-mechanisms.md`)
+- **Impact protection:** TPU lattice cage + silicone pad hybrid suspension (target: <20 G peak acceleration at PCB)
+- **Custom PCB with flex print lines:** Integrated circuit board design with flexible printed circuit (FPC) traces for sensor connections, reducing wiring complexity and improving reliability during impacts
 
 ---
 
@@ -172,12 +173,27 @@ The vacant mounts support the "Use what you have" philosophy - builders can expe
 - Spherical or near-spherical shape
 - Clear window for ToF sensor(s)
 - IMU mounted near center of mass
-- Impact protection (foam padding)
+- **Impact protection:** See `docs/technical/compliant-mechanisms.md` for detailed suspension design
 - Easy access for charging/programming
 - Balanced weight distribution
 - Accessible mounting points for optional sensors
 
 **Material options:**
-- PLA: Easy to print, rigid
-- PETG: More durable, better impact resistance
-- TPU: Flexible, excellent impact absorption (consider for outer shell)
+- **Outer shell:** PLA (easy to print, rigid) or PETG (more durable, better impact resistance)
+- **Impact suspension:** TPU lattice structure + silicone pads (recommended hybrid approach)
+- **Alternative:** TPU flexible outer shell (less precise control than internal suspension)
+
+**Custom PCB Design (Advanced Future Improvement):**
+- Integrated PCB with Pico W footprint and sensor mounting
+- Flexible printed circuit (FPC/flex PCB) traces for sensor connections
+- Benefits:
+  - Eliminates loose wires that can break during impacts
+  - Reduces weight and volume compared to breadboard/jumper wires
+  - More reliable connections during high-G throws
+  - Professional appearance
+  - Easier assembly and replication
+- Considerations:
+  - Requires PCB design skills (KiCad, Eagle, Altium)
+  - Higher upfront cost (PCB manufacturing)
+  - Less flexible for prototyping and modifications
+  - Best suited for Phase 4+ after design is stable
